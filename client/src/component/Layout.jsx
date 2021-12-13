@@ -1,16 +1,19 @@
 import React, { useState } from 'react'
-import { Header, Icon, Menu, Segment } from 'semantic-ui-react'
+import { Icon } from 'semantic-ui-react'
 import Link from 'next/link'
 import Head from 'next/head'
 import 'semantic-ui-css/semantic.min.css';
 
-
-const Nav = () => (
-  <Header as='h2'>
-    <Icon name='laptop'/>
-    <Header.Content>My web</Header.Content>
-  </Header>
-)
+const Header = () => {
+  return(
+    <>
+      <h1>
+        <Icon name='desktop'/>
+        My WEB
+      </h1>
+    </>
+  )
+}
 
 
 const Layout = ({children}) => {
@@ -22,9 +25,7 @@ const Layout = ({children}) => {
         <meta keyword="My webpage by Nexy js"></meta>
         <meta content="My webpage by Nexy js"></meta>
       </Head>
-
-      <Nav></Nav>
-      
+      <Header></Header>
       <ul>
         <li>
           <Link href='/'>
