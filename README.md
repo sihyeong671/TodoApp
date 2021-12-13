@@ -1,7 +1,7 @@
 # TodoApp
 
--Express
--React(Next.js)
--PostgreSQL
--Node.js
--stack
+- Express   
+- React(Next.js)   
+- PostgreSQL   
+- Node.js   
+- stack
