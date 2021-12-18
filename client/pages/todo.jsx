@@ -1,9 +1,7 @@
-import Head from 'next/head';
 import React, {useState, useEffect} from 'react'
 import axios from 'axios'
 
 import {Button, Modal, InputGroup, FormControl} from 'react-bootstrap'
-import { Icon } from 'semantic-ui-react'
 
 import HeadInfo from '../src/component/HeadInfo';
 
