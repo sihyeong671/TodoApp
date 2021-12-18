@@ -37,6 +37,11 @@ const Layout = ({children}) => {
             <a>Todo</a>
           </Link>
         </li>
+        <li>
+          <Link href='/count'>
+            <a>Count</a>
+          </Link>
+        </li>
       </ul>
       {children}
     </>
