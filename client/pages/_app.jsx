@@ -1,20 +1,20 @@
 import React from 'react';
 import axios from 'axios';
-import { Provider } from 'react-redux';
+import {withRedux} from 'next-redux-wrapper'
+
 
 import Layout from '../src/component/Layout';
-import store from '../store'
+import wrapper from '../store';
+
 import '../styles/globals.css'
 
 axios.defaults.baseURL = 'http://localhost:5000'
 const App = ({ Component, pageProps }) => {
   return (
-    <Provider store={store}>
       <Layout>
         <Component {...pageProps} />
       </Layout>
-    </Provider>
   )
 }
 
-export default App
+export default wrapper.withRedux(App)

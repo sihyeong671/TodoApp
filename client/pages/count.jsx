@@ -4,7 +4,7 @@ import { increment, decrement } from '../store/reducers/counter';
 
 
 const Count = () => {
-  const number = useSelector(state => state.counter)
+  const number = useSelector(state => state.counter.value)
   const dispatch = useDispatch()
   return (
     <>

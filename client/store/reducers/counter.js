@@ -1,3 +1,5 @@
+import { HYDRATE } from "next-redux-wrapper";
+
 export const INCREMENT = "counter/INCREMENT";
 export const DECREMENT = "counter/DECREMENT";
 
@@ -13,14 +15,17 @@ export const decrement = () => {
   }
 }
 
-const initialState = 0;
+const initialState = {value: 0};
 
 const counter = (state = initialState, action) => {
   switch(action.type){
+    case HYDRATE:
+      // console.log(...state, ...action)
+      return {...state, ...action}
     case INCREMENT:
-      return state + 1;
+      return {value: state.value + 1};
     case DECREMENT:
-      return state - 1;
+      return {value: state.value - 1};
     
     default:
       return state;

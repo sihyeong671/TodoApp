@@ -1,5 +1,19 @@
-import { createStore } from "redux";
+import { createStore, compose, applyMiddleware } from "redux";
+import { createWrapper } from "next-redux-wrapper";
+import { createLogger } from "redux-logger" 
+import { composeWithDevTools } from 'redux-devtools-extension';
+
 import rootReducer from './reducers';
 
-const store = createStore(rootReducer);
-export default store;
+const configureStore = () => {
+  const logger = createLogger();
+  const enhancer = compose(composeWithDevTools(applyMiddleware(logger)))
+  const store = createStore(rootReducer, enhancer);
+  return store;
+}
+
+const wrapper = createWrapper(configureStore, {
+  debug: true
+});
+
+export default wrapper;
