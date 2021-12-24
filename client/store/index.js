@@ -6,8 +6,7 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 import rootReducer from './reducers';
 
 const configureStore = () => {
-  const logger = createLogger();
-  const enhancer = compose(composeWithDevTools(applyMiddleware(logger)))
+  const enhancer = compose(composeWithDevTools(applyMiddleware()))
   const store = createStore(rootReducer, enhancer);
   return store;
 }

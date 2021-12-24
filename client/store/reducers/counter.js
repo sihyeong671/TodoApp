@@ -20,7 +20,6 @@ const initialState = {value: 0};
 const counter = (state = initialState, action) => {
   switch(action.type){
     case HYDRATE:
-      // console.log(...state, ...action)
       return {...state, ...action}
     case INCREMENT:
       return {value: state.value + 1};

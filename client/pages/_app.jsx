@@ -1,6 +1,5 @@
 import React from 'react';
 import axios from 'axios';
-import {withRedux} from 'next-redux-wrapper'
 
 
 import Layout from '../src/component/Layout';
